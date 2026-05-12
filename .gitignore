@@ -36,3 +36,5 @@ backup/
 .env
 .env.local
 .env.*.local
+# Build info
+*.tsbuildinfo
