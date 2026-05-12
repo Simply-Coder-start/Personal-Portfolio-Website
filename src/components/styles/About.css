@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  place-items: center;
+  position: relative;
+  opacity: 1;
+  height: auto;
+  width: var(--cWidth);
+  margin: auto;
+  z-index: 10;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.about-model {
+  width: 45%;
+  max-width: 500px;
+  min-width: 300px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.about-model canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+}
+
+.about-me {
+  width: 55%;
+  max-width: 650px;
+  position: relative;
+  z-index: 10;
+}
+
+.about-me h3 {
+  font-size: 1rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: #c084fc;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.about-description {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-description p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.15rem;
+  line-height: 2.1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.02em;
+  max-width: 850px;
+}
+
+@media only screen and (min-width: 600px) {
+  .about-section {
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about-section {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .about-section {
+    width: var(--cWidth);
+    max-width: 1920px;
+    height: var(--vh);
+    padding: 0px;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .about-model {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .about-me {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-typing {
+    font-size: 1.6rem;
+    min-height: 50px;
+  }
+
+  .about-description p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-container {
+    gap: 2rem;
+  }
+  .about-me {
+    width: 60%;
+  }
+  .about-model {
+    width: 40%;
+    min-width: 250px;
+  }
+  .about-typing {
+    font-size: 1.8rem;
+  }
+}
+
+.about-typing {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  letter-spacing: -0.03em;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 20;
+  display: block;
+  min-height: 60px;
+  width: 100%;
+}
+
+.highlight {
+  color: #c084fc;
+}

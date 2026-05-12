@@ -1,0 +1,126 @@
+.resume-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.resume-modal-container {
+  width: 90%;
+  height: 90%;
+  max-width: 1000px;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.resume-modal-header {
+  padding: 20px 30px;
+  background: rgba(30, 30, 30, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resume-modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.resume-modal-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.download-btn {
+  background: #c084fc;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.download-btn:hover {
+  background: #d8b4fe;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(192, 132, 252, 0.4);
+}
+
+.close-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  transform: rotate(90deg);
+}
+
+.resume-modal-body {
+  flex: 1;
+  background: #111;
+  position: relative;
+}
+
+.resume-modal-body iframe {
+  border: none;
+  filter: invert(0.9) hue-rotate(180deg); /* Optional: Dark mode for PDF if it's white */
+}
+
+/* Adjust iframe for different browsers */
+@media (max-width: 768px) {
+  .resume-modal-container {
+    width: 95%;
+    height: 95%;
+  }
+  
+  .resume-modal-header {
+    padding: 15px 20px;
+  }
+  
+  .resume-modal-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .download-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
